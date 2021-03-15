@@ -1,0 +1,9 @@
+# App
+node_modules
+build
+logs
+.env
+
+# vscode
+.vscode
+.ide
