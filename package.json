@@ -1,8 +1,12 @@
 {
-  "name": "restapi",
+  "name": "alumni-restapi",
   "version": "0.1.1",
-  "description": "TypeScript + Mongoose + MongoDB + Express API Server",
-  "author": "",
+  "description": "Alumni apps include marketplace, job seeker and payment",
+  "author": {
+    "email": "risqir57@gmail.com",
+    "name": "Risqi Romadhoni",
+    "url": "https://risqiromadhoni.com"
+  },
   "license": "ISC",
   "scripts": {
     "start": "yarn build && cross-env NODE_ENV=production node build/server.js",
