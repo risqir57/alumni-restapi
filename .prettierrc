@@ -1,8 +1,10 @@
 {
-    "printWidth": 150,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "semi": true,
-    "arrowParens": "avoid"
+  "singleQuote": true,
+  "parser": "babel-ts",
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "semi": false,
+  "arrowParens": "avoid"
 }

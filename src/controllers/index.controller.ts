@@ -1,16 +1,16 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express'
 
 class IndexController {
   public index = (req: Request, res: Response, next: NextFunction) => {
     try {
       res.status(200).json({
         error: false,
-        message: "Welcome to Rest API Alumni"
-      });
+        message: 'Welcome to Rest API Alumni',
+      })
     } catch (error) {
-      next(error);
+      next(error)
     }
-  };
+  }
 }
 
-export default IndexController;
+export default IndexController
