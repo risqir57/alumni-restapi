@@ -8,13 +8,16 @@
     "url": "https://risqiromadhoni.com"
   },
   "license": "ISC",
+  "private": true,
   "scripts": {
     "start": "yarn build && cross-env NODE_ENV=production node build/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "tsc",
     "test": "jest --forceExit --detectOpenHandles",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
-    "lint:fix": "yarn lint -- --fix"
+    "lint:fix": "yarn lint -- --fix",
+    "postinstall": "husky install",
+    "prepare": "yarn postinstall"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
