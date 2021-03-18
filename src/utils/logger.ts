@@ -14,7 +14,8 @@ const { combine, timestamp, printf } = winston.format
 
 // Define log format
 const logFormat = printf(
-  ({ timestamp, level, message }) => `${timestamp} ${level}: ${message}`,
+  ({ timestamp, level, message }) =>
+    `[${timestamp}] ${level.toUpperCase()}: ${message}`,
 )
 
 /*
