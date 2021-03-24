@@ -8,7 +8,7 @@ interface HttpResponse {
 
 class HttpResponseException {
   public statusCode: HttpStatusCode
-  public data: ReadonlyArray<any>
+  public data: ReadonlyArray<any> | any
   public message: string
 
   constructor({ statusCode, data, message }: HttpResponse) {

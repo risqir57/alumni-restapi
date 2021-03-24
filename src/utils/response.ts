@@ -9,6 +9,7 @@ const responseNormalize = (body: HttpResponseException) => {
   logger.info('You pass me!')
 
   return {
+    error: false,
     status,
     data,
     message,
