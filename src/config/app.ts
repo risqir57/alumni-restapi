@@ -39,6 +39,4 @@ const config = {
   },
 }
 
-logger.info(JSON.stringify(config))
-
 export default config
