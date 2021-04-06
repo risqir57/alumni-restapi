@@ -23,11 +23,13 @@ class App {
   public app: express.Application
   public port: string | number
   public env: string
+  public host: string
 
   constructor({ path, routes }: InitRouter) {
     this.app = express()
-    this.port = process.env.PORT || 3000
-    this.env = process.env.NODE_ENV || 'development'
+    this.port = app.port
+    this.env = app.env
+    this.host = app.domain
 
     this.connectToDatabase()
     this.initializeMiddlewares()
@@ -38,7 +40,7 @@ class App {
 
   public listen() {
     this.app.listen(this.port, () => {
-      logger.info(`🚀 App listening on the port ${this.port}`)
+      logger.info(`🚀 App listening on ${this.host}:${this.port}`)
     })
   }
 

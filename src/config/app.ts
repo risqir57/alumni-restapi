@@ -1,21 +1,24 @@
+import { logger } from '../utils/logger'
+
 const {
   MONGO_HOST,
   MONGO_PORT,
   MONGO_DATABASE,
   NODE_ENV,
   MONGO_ATLAS_USER,
-  MANGO_ATLAS_PASS,
-  MANGO_ATLAS_HOST,
-  MANGO_ATLAS_DATABASE,
+  MONGO_ATLAS_PASS,
+  MONGO_ATLAS_HOST,
+  MONGO_ATLAS_DATABASE,
   PORT,
   JWT_SECRET,
   JWT_REFRESH_SECRET,
-  API_DOMAIN,
+  API_HOST,
 } = process.env
 
 const config = {
   isProd: NODE_ENV === 'production',
-  domain: API_DOMAIN,
+  env: NODE_ENV || 'production',
+  domain: API_HOST || 'http://127.0.0.1',
   port: PORT || 3000,
   jwt: {
     secret: JWT_SECRET || 'jwt_secret',
@@ -25,9 +28,9 @@ const config = {
   },
   mongodb: {
     user: MONGO_ATLAS_USER,
-    password: MANGO_ATLAS_PASS,
-    host: MANGO_ATLAS_HOST,
-    database: MANGO_ATLAS_DATABASE,
+    password: MONGO_ATLAS_PASS,
+    host: MONGO_ATLAS_HOST,
+    database: MONGO_ATLAS_DATABASE,
   },
   mongodb_dev: {
     port: MONGO_PORT || 27017,
@@ -35,5 +38,7 @@ const config = {
     database: MONGO_DATABASE || 'alumni_db',
   },
 }
+
+logger.info(JSON.stringify(config))
 
 export default config

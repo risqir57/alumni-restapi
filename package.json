@@ -11,6 +11,8 @@
   "private": true,
   "scripts": {
     "start": "yarn build && cross-env NODE_ENV=production node build/server.js",
+    "start:dev": "yarn build && unset ENVFILE && rm -fr .env && cp .env.staging .env && export ENVFILE=.env && node build/server.js",
+    "start:prod": "yarn build && unset ENVFILE && rm -fr .env && cp .env.prod .env && export ENVFILE=.env && node build/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "tsc",
     "test": "jest --forceExit --detectOpenHandles",
