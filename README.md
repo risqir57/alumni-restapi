@@ -52,5 +52,177 @@ This repo for handle REST API for Alumni Apps
   docker-compose up -d
   ```
 
+## Repository Map
+```
+.
+├── Dockerfile
+├── Dockerfile.dev
+├── LICENSE
+├── Makefile
+├── README.md
+├── build
+│   ├── app.js
+│   ├── app.js.map
+│   ├── config
+│   │   ├── app.js
+│   │   ├── app.js.map
+│   │   ├── index.js
+│   │   └── index.js.map
+│   ├── controllers
+│   │   ├── auth.controller.js
+│   │   ├── auth.controller.js.map
+│   │   ├── index.controller.js
+│   │   ├── index.controller.js.map
+│   │   ├── users.controller.js
+│   │   └── users.controller.js.map
+│   ├── database
+│   │   ├── index.js
+│   │   └── index.js.map
+│   ├── dtos
+│   │   ├── users.dto.js
+│   │   └── users.dto.js.map
+│   ├── enums
+│   │   ├── HttpResponse.js
+│   │   └── HttpResponse.js.map
+│   ├── exceptions
+│   │   ├── HttpException.js
+│   │   ├── HttpException.js.map
+│   │   ├── HttpResponseException.js
+│   │   └── HttpResponseException.js.map
+│   ├── interfaces
+│   │   ├── auth.interface.js
+│   │   ├── auth.interface.js.map
+│   │   ├── routes.interface.js
+│   │   ├── routes.interface.js.map
+│   │   ├── users.interface.js
+│   │   └── users.interface.js.map
+│   ├── middlewares
+│   │   ├── auth.middleware.js
+│   │   ├── auth.middleware.js.map
+│   │   ├── error.middleware.js
+│   │   ├── error.middleware.js.map
+│   │   ├── validation.middleware.js
+│   │   └── validation.middleware.js.map
+│   ├── models
+│   │   ├── users.model.js
+│   │   └── users.model.js.map
+│   ├── routes
+│   │   ├── auth.route.js
+│   │   ├── auth.route.js.map
+│   │   ├── index.route.js
+│   │   ├── index.route.js.map
+│   │   ├── users.route.js
+│   │   └── users.route.js.map
+│   ├── server.js
+│   ├── server.js.map
+│   ├── services
+│   │   ├── auth.service.js
+│   │   ├── auth.service.js.map
+│   │   ├── users.service.js
+│   │   └── users.service.js.map
+│   ├── tests
+│   │   ├── auth.test.js
+│   │   ├── auth.test.js.map
+│   │   ├── index.test.js
+│   │   ├── index.test.js.map
+│   │   ├── users.test.js
+│   │   └── users.test.js.map
+│   └── utils
+│       ├── logger.js
+│       ├── logger.js.map
+│       ├── response.js
+│       ├── response.js.map
+│       ├── util.js
+│       ├── util.js.map
+│       ├── validateEnv.js
+│       └── validateEnv.js.map
+├── changelog.config.js
+├── docker-compose.yml
+├── docs
+│   └── newman
+│       ├── LICENSE
+│       ├── collection
+│       │   ├── Alumni\ API.postman_collection.json
+│       │   └── Alumni\ APi.postman_environment.json
+│       ├── package.json
+│       ├── resultNewman.html
+│       ├── server.js
+│       └── yarn.lock
+├── jest.config.js
+├── nginx.conf
+├── nodemon.json
+├── package.json
+├── src
+│   ├── app.ts
+│   ├── config
+│   │   ├── app.ts
+│   │   └── index.ts
+│   ├── controllers
+│   │   ├── auth.controller.ts
+│   │   ├── index.controller.ts
+│   │   ├── roles.controller.ts
+│   │   └── users.controller.ts
+│   ├── database
+│   │   └── index.ts
+│   ├── dtos
+│   │   ├── date.dto.ts
+│   │   ├── roles.dto.ts
+│   │   └── users.dto.ts
+│   ├── enums
+│   │   └── HttpResponse.ts
+│   ├── exceptions
+│   │   ├── HttpException.ts
+│   │   └── HttpResponseException.ts
+│   ├── interfaces
+│   │   ├── auth.interface.ts
+│   │   ├── core.interface.ts
+│   │   ├── files.interface.ts
+│   │   ├── forums.interface.ts
+│   │   ├── message.interface.ts
+│   │   ├── roles.interface.ts
+│   │   ├── routes.interface.ts
+│   │   └── users.interface.ts
+│   ├── logs
+│   │   ├── error
+│   │   │   ├── 2021-04-02.error.log
+│   │   │   └── 2021-04-03.error.log
+│   │   └── info
+│   │       ├── 2021-04-02.log
+│   │       └── 2021-04-03.log
+│   ├── middlewares
+│   │   ├── auth.middleware.ts
+│   │   ├── error.middleware.ts
+│   │   └── validation.middleware.ts
+│   ├── models
+│   │   ├── forums.model.ts
+│   │   ├── roles.model.ts
+│   │   └── users.model.ts
+│   ├── routes
+│   │   ├── auth.route.ts
+│   │   ├── frontend
+│   │   │   └── index.ts
+│   │   ├── index.route.ts
+│   │   ├── index.ts
+│   │   ├── roles.route.ts
+│   │   └── users.route.ts
+│   ├── server.ts
+│   ├── services
+│   │   ├── auth.service.ts
+│   │   ├── role.service.ts
+│   │   └── users.service.ts
+│   ├── tests
+│   │   ├── auth.test.ts
+│   │   ├── index.test.ts
+│   │   └── users.test.ts
+│   └── utils
+│       ├── logger.ts
+│       ├── response.ts
+│       ├── util.ts
+│       └── validateEnv.ts
+├── swagger.yaml
+├── tree.txt
+├── tsconfig.json
+└── yarn.lock
+```
 
 *Made with ❤️ by [Risqi Romadhoni](https://risqiromadhoni.com)*

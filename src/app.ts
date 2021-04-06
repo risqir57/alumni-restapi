@@ -12,6 +12,7 @@ import { dbConnection } from './database'
 import Routes from './interfaces/routes.interface'
 import errorMiddleware from './middlewares/error.middleware'
 import { logger, stream } from './utils/logger'
+import { app } from './config'
 
 export interface InitRouter {
   path?: string
@@ -31,7 +32,7 @@ class App {
     this.connectToDatabase()
     this.initializeMiddlewares()
     this.initializeRoutes(path, routes)
-    this.initializeSwagger()
+    // this.initializeSwagger()
     this.initializeErrorHandling()
   }
 
@@ -74,6 +75,14 @@ class App {
     this.app.use(express.json())
     this.app.use(express.urlencoded({ extended: true }))
     this.app.use(cookieParser())
+    this.app.use(
+      cors({
+        origin: app.domain,
+        methods: 'GET,PUT,PATCH,POST,DELETE',
+        preflightContinue: false,
+        optionsSuccessStatus: 204,
+      }),
+    )
   }
 
   private initializeRoutes(path: string, routes: Routes[]) {

@@ -1,19 +1,14 @@
+import { app as config } from '../config'
 import { logger } from '../utils/logger'
 
 const {
-  MONGO_HOST,
-  MONGO_PORT,
-  MONGO_DATABASE,
-  NODE_ENV,
-  MONGO_ATLAS_USER,
-  MANGO_ATLAS_PASS,
-  MANGO_ATLAS_HOST,
-} = process.env
+  isProd,
+  mongodb_dev: { host, database, port },
+  mongodb,
+} = config
 
-const isProd = NODE_ENV === 'production'
-
-const localURL = `mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}`
-const prodURL = `mongodb+srv://${MONGO_ATLAS_USER}:${MANGO_ATLAS_PASS}@${MANGO_ATLAS_HOST}/${MONGO_DATABASE}`
+const localURL = `mongodb://${host}:${port}/${database}`
+const prodURL = `mongodb+srv://${mongodb.user}:${mongodb.password}@${mongodb.host}/${mongodb.database}`
 
 const url: string = isProd ? prodURL : localURL
 logger.info(`🌱 Connect to 🌱 ${url}`)

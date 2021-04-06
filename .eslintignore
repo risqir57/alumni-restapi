@@ -1,1 +1,9 @@
 build/*
+LICENSE
+README.md
+Makefile
+Dockerfile*
+docker-compose.yml.
+prettierrc
+.env*
+nginx*

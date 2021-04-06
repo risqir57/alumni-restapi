@@ -6,8 +6,6 @@ const responseNormalize = (body: HttpResponseException) => {
   const data = body.data
   const message = body.message || 'Success'
 
-  logger.info('You pass me!')
-
   return {
     error: false,
     status,

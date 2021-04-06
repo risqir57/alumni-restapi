@@ -32,7 +32,7 @@ class UsersController {
 
     try {
       const findOneUserData: User = await this.userService.findUserById(userId)
-      res.status(200).json(
+      res.status(HttpStatusCode.Ok).json(
         responseNormalize({
           data: findOneUserData,
           statusCode: HttpStatusCode.Ok,
@@ -53,7 +53,13 @@ class UsersController {
 
     try {
       const createUserData: User = await this.userService.createUser(userData)
-      res.status(201).json({ data: createUserData, message: 'created' })
+      res.status(HttpStatusCode.Created).json(
+        responseNormalize({
+          data: createUserData,
+          statusCode: HttpStatusCode.Created,
+          message: 'created',
+        }),
+      )
     } catch (error) {
       next(error)
     }
@@ -72,7 +78,34 @@ class UsersController {
         userId,
         userData,
       )
-      res.status(200).json({ data: updateUserData, message: 'updated' })
+      res.status(HttpStatusCode.Ok).json(
+        responseNormalize({
+          data: updateUserData,
+          statusCode: HttpStatusCode.Ok,
+          message: 'updated',
+        }),
+      )
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  public softDeleteUser = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    const userId: string = req.params.id
+
+    try {
+      const softDeleteUserData: User = await this.userService.softDelete(userId)
+      res.status(HttpStatusCode.Ok).json(
+        responseNormalize({
+          data: softDeleteUserData,
+          statusCode: HttpStatusCode.Ok,
+          message: 'updated',
+        }),
+      )
     } catch (error) {
       next(error)
     }
@@ -87,7 +120,13 @@ class UsersController {
 
     try {
       const deleteUserData: User = await this.userService.deleteUserData(userId)
-      res.status(200).json({ data: deleteUserData, message: 'deleted' })
+      res.status(HttpStatusCode.Ok).json(
+        responseNormalize({
+          data: deleteUserData,
+          statusCode: HttpStatusCode.Ok,
+          message: 'delleted',
+        }),
+      )
     } catch (error) {
       next(error)
     }

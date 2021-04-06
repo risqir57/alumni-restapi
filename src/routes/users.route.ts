@@ -5,7 +5,7 @@ import Route from '../interfaces/routes.interface'
 import validationMiddleware from '../middlewares/validation.middleware'
 
 class UsersRoute implements Route {
-  public path = '/users'
+  public path = '/admin/users'
   public router = Router()
   public usersController = new UsersController()
 
@@ -25,6 +25,10 @@ class UsersRoute implements Route {
       `${this.path}/:id`,
       validationMiddleware(CreateUserDto, 'body', true),
       this.usersController.updateUser,
+    )
+    this.router.delete(
+      `${this.path}/:id/soft-delete`,
+      this.usersController.softDeleteUser,
     )
     this.router.delete(`${this.path}/:id`, this.usersController.deleteUser)
   }

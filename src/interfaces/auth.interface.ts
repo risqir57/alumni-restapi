@@ -2,7 +2,7 @@ import { Request } from 'express'
 import { User } from './users.interface'
 
 export interface DataStoredInToken {
-  _id: string
+  userId: string
 }
 
 export interface TokenData {
@@ -12,4 +12,5 @@ export interface TokenData {
 
 export interface RequestWithUser extends Request {
   user: User
+  refreshToken?: string
 }

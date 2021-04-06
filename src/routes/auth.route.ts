@@ -1,11 +1,13 @@
+import { refreshTokenMiddleware } from './../middlewares/auth.middleware'
 import { Router } from 'express'
 import AuthController from '../controllers/auth.controller'
-import { CreateUserDto } from '../dtos/users.dto'
+import { CreateUserDto, LoginUserDto } from '../dtos/users.dto'
 import Route from '../interfaces/routes.interface'
 import authMiddleware from '../middlewares/auth.middleware'
 import validationMiddleware from '../middlewares/validation.middleware'
 
 class AuthRoute implements Route {
+  public path = '/auth'
   public router = Router()
   public authController = new AuthController()
 
@@ -15,16 +17,30 @@ class AuthRoute implements Route {
 
   private initializeRoutes() {
     this.router.post(
-      '/signup',
+      `${this.path}/signup`,
       validationMiddleware(CreateUserDto, 'body'),
       this.authController.signUp,
     )
     this.router.post(
-      '/login',
-      validationMiddleware(CreateUserDto, 'body'),
+      `${this.path}/login`,
+      validationMiddleware(LoginUserDto, 'body'),
       this.authController.logIn,
     )
-    this.router.post('/logout', authMiddleware, this.authController.logOut)
+    this.router.post(
+      `${this.path}/logout`,
+      authMiddleware,
+      this.authController.logOut,
+    )
+    this.router.post(
+      `${this.path}/whoami`,
+      authMiddleware,
+      this.authController.whoami,
+    )
+    this.router.post(
+      `${this.path}/refresh-token`,
+      refreshTokenMiddleware,
+      this.authController.refreshToken,
+    )
   }
 }
 

@@ -105,17 +105,30 @@ definitions:
   users:
     type: object
     required:
+        - firstName
+        - lastName
+        - nrp
         - email
         - password
     properties:
       id:
         description: user Id
+      firstName:
+        type: string
+        description: user first name
+      lastName:
+        type: string
+        description: user last name
+      nrp:
+        type: string
+        description: nrp number used as username
       email:
         type: string
         description: user Email
       password:
         type: string
         description: user Password
+    examples:
 
 schemes:
   - http

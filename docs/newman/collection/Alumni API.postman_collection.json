@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "f0f2ea5f-c77f-4c08-878b-85f1c5c63153",
+		"name": "Alumni API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "user",
+							"item": [
+								{
+									"name": "Bulk User",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/admin/users",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"admin",
+												"users"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Bulk User",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{host}}/v1/admin/users",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"v1",
+														"admin",
+														"users"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin, Accept-Encoding"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off"
+												},
+												{
+													"key": "Expect-CT",
+													"value": "max-age=0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-Permitted-Cross-Domain-Policies",
+													"value": "none"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "360"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"168-tj+cGLUox9kREdjoDMnCGdsDTBc\""
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 02 Apr 2021 12:07:02 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": false,\n    \"status\": 200,\n    \"data\": [\n        {\n            \"deletedAt\": false,\n            \"_id\": \"6066fbe98f5ce50dac458efd\",\n            \"firstName\": \"Risqi\",\n            \"lastName\": \"Romadhoni\",\n            \"nrp\": \"089748378732\",\n            \"email\": \"risqir@mail.com\",\n            \"password\": \"$2b$10$JNPONAb3fGvH.hc8ZIxJmeAupkqYSBvnvjQGB/VLBeziDpVeE.Aem\",\n            \"createdAt\": \"2021-04-02T11:11:37.184Z\",\n            \"updatedAt\": \"2021-04-02T11:11:37.184Z\",\n            \"__v\": 0\n        }\n    ],\n    \"message\": \"findAll\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Add User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Risqi\",\n    \"lastName\": \"Romadhoni\",\n    \"nrp\": \"08974837873\",\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/admin/users",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"admin",
+												"users"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Add User",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"firstName\": \"Risqi\",\n    \"lastName\": \"Romadhoni\",\n    \"nrp\": \"08974837873\",\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/v1/admin/users",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"v1",
+														"admin",
+														"users"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin, Accept-Encoding"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off"
+												},
+												{
+													"key": "Expect-CT",
+													"value": "max-age=0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-Permitted-Cross-Domain-Policies",
+													"value": "none"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "356"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"164-lu4LT1cWBQQkItZwRfHuTQF1Ynk\""
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 02 Apr 2021 11:13:46 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": false,\n    \"status\": 201,\n    \"data\": {\n        \"deletedAt\": false,\n        \"_id\": \"6066fc6a90532c0e3d6a006f\",\n        \"firstName\": \"Risqi\",\n        \"lastName\": \"Romadhoni\",\n        \"nrp\": \"08974837873\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$5hnb2M2ZOIXSG6ZVjNL2FewFSn7nbDjZu2KeukXjex8.eeGDuzos2\",\n        \"createdAt\": \"2021-04-02T11:13:46.111Z\",\n        \"updatedAt\": \"2021-04-02T11:13:46.111Z\",\n        \"__v\": 0\n    },\n    \"message\": \"created\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update User",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Risqi\",\n    \"lastName\": \"Romadhoni\",\n    \"nrp\": \"08974837873\",\n    \"email\": \"risqi@mail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"admin",
+												"users",
+												"6066fc6a90532c0e3d6a006f"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Update User",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"firstName\": \"Risqi\",\n    \"lastName\": \"Romadhoni\",\n    \"nrp\": \"08974837873\",\n    \"email\": \"risqi@mail.com\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"v1",
+														"admin",
+														"users",
+														"6066fc6a90532c0e3d6a006f"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin, Accept-Encoding"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off"
+												},
+												{
+													"key": "Expect-CT",
+													"value": "max-age=0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-Permitted-Cross-Domain-Policies",
+													"value": "none"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "356"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"164-qZ+zE9bVB+3Bnr/RJ6fOghVGH7s\""
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 02 Apr 2021 11:42:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": false,\n    \"status\": 200,\n    \"data\": {\n        \"deletedAt\": false,\n        \"_id\": \"6066fc6a90532c0e3d6a006f\",\n        \"firstName\": \"Risqi\",\n        \"lastName\": \"Romadhoni\",\n        \"nrp\": \"08974837873\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$zApPKJ0hAGoViaHHM4VSluD97IeZ/iKcVJgXQppoHeaCAW4eTKVGa\",\n        \"createdAt\": \"2021-04-02T11:13:46.111Z\",\n        \"updatedAt\": \"2021-04-02T11:42:23.855Z\",\n        \"__v\": 0\n    },\n    \"message\": \"updated\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Soft Delete User",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f/soft-delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"admin",
+												"users",
+												"6066fc6a90532c0e3d6a006f",
+												"soft-delete"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Soft Delete User",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f/soft-delete",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"v1",
+														"admin",
+														"users",
+														"6066fc6a90532c0e3d6a006f",
+														"soft-delete"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin, Accept-Encoding"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off"
+												},
+												{
+													"key": "Expect-CT",
+													"value": "max-age=0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-Permitted-Cross-Domain-Policies",
+													"value": "none"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "377"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"179-d6j8fvPPVnKuseBbyS8mEwqxXVc\""
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 02 Apr 2021 12:05:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": false,\n    \"status\": 200,\n    \"data\": {\n        \"deletedAt\": \"2021-04-02T12:05:44.609Z\",\n        \"_id\": \"6066fc6a90532c0e3d6a006f\",\n        \"firstName\": \"Risqi\",\n        \"lastName\": \"Romadhoni\",\n        \"nrp\": \"08974837873\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$zApPKJ0hAGoViaHHM4VSluD97IeZ/iKcVJgXQppoHeaCAW4eTKVGa\",\n        \"createdAt\": \"2021-04-02T11:13:46.111Z\",\n        \"updatedAt\": \"2021-04-02T11:42:23.855Z\",\n        \"__v\": 0\n    },\n    \"message\": \"updated\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete User",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"admin",
+												"users",
+												"6066fc6a90532c0e3d6a006f"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Delete User",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{host}}/v1/admin/users/6066fc6a90532c0e3d6a006f",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"v1",
+														"admin",
+														"users",
+														"6066fc6a90532c0e3d6a006f"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin, Accept-Encoding"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off"
+												},
+												{
+													"key": "Expect-CT",
+													"value": "max-age=0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-Permitted-Cross-Domain-Policies",
+													"value": "none"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "378"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"17a-yl1FoU5wic3LsZu4X2SpFjc414U\""
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 02 Apr 2021 12:06:37 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": false,\n    \"status\": 200,\n    \"data\": {\n        \"deletedAt\": \"2021-04-02T12:05:44.609Z\",\n        \"_id\": \"6066fc6a90532c0e3d6a006f\",\n        \"firstName\": \"Risqi\",\n        \"lastName\": \"Romadhoni\",\n        \"nrp\": \"08974837873\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$zApPKJ0hAGoViaHHM4VSluD97IeZ/iKcVJgXQppoHeaCAW4eTKVGa\",\n        \"createdAt\": \"2021-04-02T11:13:46.111Z\",\n        \"updatedAt\": \"2021-04-02T11:42:23.855Z\",\n        \"__v\": 0\n    },\n    \"message\": \"delleted\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "frontend",
+					"item": []
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/v1/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/auth/login",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "Expect-CT",
+											"value": "max-age=0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY3MGMwZDc4OTNmZjE2Yjg1ZmIxMzciLCJpYXQiOjE2MTczNjYxODgsImV4cCI6MTYxNzM2OTc4OH0.Em7NfHUDpRG3yXBwbjsxfpZapa6KEkcYAhd_7mBtHO4; HttpOnly; Max-Age=3600;"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "325"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"145-PlG/gfhHyuAvjDa+nsf8U849zDI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 02 Apr 2021 12:23:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"deletedAt\": false,\n        \"_id\": \"60670c0d7893ff16b85fb137\",\n        \"firstName\": \"risqi\",\n        \"lastName\": \"Roma\",\n        \"nrp\": \"08309743868543\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$WMZSHBdg4j5X83wNVRwDOeRdTQMfDW7qbs9bG2xcZhs/jvnnkJPnO\",\n        \"createdAt\": \"2021-04-02T12:20:29.996Z\",\n        \"updatedAt\": \"2021-04-02T12:20:29.996Z\",\n        \"__v\": 0\n    },\n    \"message\": \"login\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"risqi\",\n    \"lastName\": \"Roma\",\n    \"nrp\": \"08309743868543\",\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/v1/auth/signup",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"risqi\",\n    \"lastName\": \"Roma\",\n    \"nrp\": \"08309743868543\",\n    \"email\": \"risqi@mail.com\",\n    \"password\": \"qwerty\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/auth/signup",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "Expect-CT",
+											"value": "max-age=0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "326"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"146-8tLENZGZFi+Wn/Ooqpa9KOSCG90\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 02 Apr 2021 12:20:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"deletedAt\": false,\n        \"_id\": \"60670c0d7893ff16b85fb137\",\n        \"firstName\": \"risqi\",\n        \"lastName\": \"Roma\",\n        \"nrp\": \"08309743868543\",\n        \"email\": \"risqi@mail.com\",\n        \"password\": \"$2b$10$WMZSHBdg4j5X83wNVRwDOeRdTQMfDW7qbs9bG2xcZhs/jvnnkJPnO\",\n        \"createdAt\": \"2021-04-02T12:20:29.996Z\",\n        \"updatedAt\": \"2021-04-02T12:20:29.996Z\",\n        \"__v\": 0\n    },\n    \"message\": \"signup\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/v1/auth/logout",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Logout",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/auth/logout",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"auth",
+												"logout"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "Expect-CT",
+											"value": "max-age=0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-AMT//7/IvsGjU6FTiYzPu4kMBec\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 02 Apr 2021 12:25:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": true,\n    \"message\": \"Authentication token missing\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
