@@ -65,7 +65,7 @@ class App {
   private initializeMiddlewares() {
     if (this.env === 'production') {
       this.app.use(morgan('combined', { stream }))
-      this.app.use(cors({ origin: 'your.domain.com', credentials: true }))
+      this.app.use(cors({ origin: app.domain, credentials: true }))
     } else if (this.env === 'development') {
       this.app.use(morgan('dev', { stream }))
       this.app.use(cors({ origin: true, credentials: true }))
@@ -93,7 +93,7 @@ class App {
     })
   }
 
-  private initializeSwagger() {
+  /* private initializeSwagger() {
     const options: swaggerJSDoc.Options = {
       swaggerDefinition: {
         basePath: '/v1',
@@ -108,7 +108,7 @@ class App {
 
     const specs = swaggerJSDoc(options)
     this.app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(specs))
-  }
+  } */
 
   private initializeErrorHandling() {
     this.app.use(errorMiddleware)
